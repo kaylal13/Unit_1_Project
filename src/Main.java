@@ -6,6 +6,7 @@ public class Main {
         Scanner scan = new Scanner (System.in);
         System.out.println("Your bill: ");
         double totalBill = scan.nextDouble();
+        int newBill = (int)(totalBill*100);
 
         System.out.println("Tip percent: ");
         double percentage = scan.nextInt();
@@ -14,16 +15,18 @@ public class Main {
         int partyAmount = scan.nextInt();
         System.out.println("-------------------");
 
-        double totalTip = totalBill*(percentage/100);
-        System.out.println("Your total tip is: "+totalTip);
+        double totalTip =(int)((newBill*percentage)/100);
+        double newTotalTip = totalTip/100;
+        System.out.println("Your total tip is: "+newTotalTip);
 
-        double tipPerPerson = totalTip/partyAmount;
-        System.out.println("For tips, each person pays: "+tipPerPerson);
+        double tipPerPerson = (int)(totalTip/partyAmount);
+        double newPersonTip = tipPerPerson/100;
+        System.out.println("For tips, each person pays: "+newPersonTip);
 
-        double totalAmount= totalBill+totalTip;
+        double totalAmount= totalBill+newTotalTip;
         System.out.println("The total amount (bill and tips) is: "+totalAmount);
 
-        double totalPerPerson = tipPerPerson+totalAmount/partyAmount;
+        double totalPerPerson = (totalBill/partyAmount)+newPersonTip;
         System.out.println("In total each person pays: "+totalPerPerson);
 
 
