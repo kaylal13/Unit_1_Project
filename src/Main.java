@@ -20,7 +20,8 @@ public class Main {
 
         double totalTip =(int)((newBill*percentage)/100);
         double newTotalTip = totalTip/100;
-        System.out.println("Your total tip is: $"+newTotalTip);
+        String formattedTotalTip = String.format ("%.2f", newTotalTip);
+        System.out.println("Your total tip is: $"+formattedTotalTip);
 
 
         double tipPerPerson = (int)(totalTip/partyAmount);
@@ -28,7 +29,7 @@ public class Main {
         System.out.println("For tips, each person pays: $"+newTip);
 
 
-        double totalAmount= totalBill+newTotalTip;
+        double totalAmount= totalBill+newTip;
         System.out.println("The total amount (bill and tips) is: $"+totalAmount);
 
 
