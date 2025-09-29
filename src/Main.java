@@ -29,7 +29,7 @@ public class Main {
         System.out.println("For tips, each person pays: $"+newTip);
 
 
-        double totalAmount= totalBill+newTip;
+        double totalAmount= totalBill+newTotalTip;
         System.out.println("The total amount (bill and tips) is: $"+totalAmount);
 
 
